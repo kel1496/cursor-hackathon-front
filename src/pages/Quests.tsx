@@ -179,6 +179,10 @@ const Quests = () => {
 
   return (
     <div className="mx-auto flex flex-col items-center pb-20 min-h-screen bg-gray-900">
+      {/* CoinBound Header */}
+      <div className="w-full flex items-center justify-center py-3 border-b-4 border-gray-800 bg-gray-900 mb-4">
+        <h1 className="text-yellow-400 font-bold text-xl pixel-art">💰 CoinBound</h1>
+      </div>
       {/* Header */}
       <div className="w-[90%] mt-6 mb-4">
         <h1 className="text-3xl font-bold text-white mb-2 pixel-art">Quests</h1>

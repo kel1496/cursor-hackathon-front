@@ -11,6 +11,12 @@ const Index = () => {
 
   return (
     <div className="mx-auto flex flex-col items-center pb-20 min-h-screen bg-gray-900 relative">
+      {/* CoinBound Header */}
+      <div className="w-full flex items-center justify-center py-4 border-b-4 border-gray-800 bg-gray-900">
+        <h1 className="text-yellow-400 font-bold text-2xl pixel-art">
+          💰 CoinBound
+        </h1>
+      </div>
       <QuestBadge
         count={completedQuestsCount}
         onClick={() => setLocation("/quests")}
@@ -27,7 +33,10 @@ const Index = () => {
         {/* Barras a la derecha */}
         <div className="flex-1 flex flex-col justify-center">
           {/* Barra de Experiencia */}
-          <label className="block text-gray-300 text-sm font-semibold mb-1" htmlFor="exp-bar">
+          <label
+            className="block text-gray-300 text-sm font-semibold mb-1"
+            htmlFor="exp-bar"
+          >
             Experience
           </label>
           <div className="w-full bg-gray-700 h-6 mb-3 border-2 border-gray-600 overflow-hidden relative">
@@ -41,7 +50,10 @@ const Index = () => {
             </span>
           </div>
           {/* Barra de Vida */}
-          <label className="block text-gray-300 text-sm font-semibold mb-1" htmlFor="hp-bar">
+          <label
+            className="block text-gray-300 text-sm font-semibold mb-1"
+            htmlFor="hp-bar"
+          >
             Life
           </label>
           <div className="w-full bg-gray-700 h-6 mb-3 border-2 border-gray-600 overflow-hidden">
@@ -60,8 +72,12 @@ const Index = () => {
           <div className="text-xl font-bold text-white">$840</div>
         </div>
         <div className="flex flex-col items-end gap-1">
-          <span className="bg-green-900 text-green-400 font-semibold px-3 py-1 text-xs border-2 border-green-600">+2hp/day</span>
-          <span className="bg-blue-900 text-blue-400 font-semibold px-3 py-1 text-xs border-2 border-blue-600 pixel-art">🔥 4 days</span>
+          <span className="bg-green-900 text-green-400 font-semibold px-3 py-1 text-xs border-2 border-green-600">
+            +2hp/day
+          </span>
+          <span className="bg-blue-900 text-blue-400 font-semibold px-3 py-1 text-xs border-2 border-blue-600 pixel-art">
+            🔥 4 days
+          </span>
         </div>
       </div>
       {/* Banks Section */}

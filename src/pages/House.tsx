@@ -47,6 +47,12 @@ export const House = () => {
   return (
     // Main container uses flex-col and h-screen to fill the viewport
     <div className="h-screen w-full flex flex-col bg-gray-900 text-white font-sans">
+      {/* CoinBound Header */}
+      <div className="w-full flex items-center justify-center py-3 border-b-4 border-gray-800 bg-gray-900">
+        <h1 className="text-yellow-400 font-bold text-xl pixel-art">
+          💰 CoinBound
+        </h1>
+      </div>
       {/* --- 1. Sticky Character Image Section --- */}
       <header className="sticky top-0 z-10 w-full flex justify-center py-4 md:py-6 bg-gray-900 shadow-lg">
         <img
