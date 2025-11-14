@@ -5,6 +5,9 @@ import Profile from "./pages/Profile";
 import { Attributes } from "./pages/Attributes";
 import { House } from "./pages/House";
 import Bank from "./pages/Bank";
+import Quests from "./pages/Quests";
+import Achievements from "./pages/Achievements";
+import Stats from "./pages/Stats";
 import "./App.css";
 
 function App() {
@@ -23,6 +26,9 @@ function App() {
       <Route path="/attributes" component={Attributes} />
       <Route path="/house" component={House} />
       <Route path="/bank" component={Bank} />
+      <Route path="/quests" component={Quests} />
+      <Route path="/achievements" component={Achievements} />
+      <Route path="/stats" component={Stats} />
     </>
   );
 }

@@ -59,12 +59,12 @@ const questions = [
       {
         value: "a",
         label: "Encouraging ally",
-        image: "https://placehold.co/300x300/71717A/FFF?text=Rogue",
+        image: "/3.png",
       },
       {
         value: "b",
         label: "Stern commander",
-        image: "https://placehold.co/300x300/16A34A/FFF?text=Druid",
+        image: "3.png",
       },
     ],
   },
@@ -75,12 +75,12 @@ const questions = [
       {
         value: "a",
         label: "Calm and steady",
-        image: "https://placehold.co/300x300/6B7280/FFF?text=Paladin",
+        image: "/3.png",
       },
       {
         value: "b",
         label: "High-stakes and dark",
-        image: "https://placehold.co/300x300/EC4899/FFF?text=Sorcerer",
+        image: "/3.png",
       },
     ],
   },
@@ -91,12 +91,12 @@ const questions = [
       {
         value: "a",
         label: "Daily treats (coffee/food)",
-        image: "https://placehold.co/300x300/1E1B4B/FFF?text=Overlord",
+        image: "/3.png",
       },
       {
         value: "b",
         label: "Impulse spending (shopping/nightlife)",
-        image: "https://placehold.co/300x300/F0F9FF/111?text=Savior",
+        image: "/3.png",
       },
     ],
   },
@@ -107,12 +107,12 @@ const questions = [
       {
         value: "a",
         label: "Short heroic title",
-        image: "https://placehold.co/300x300/EF4444/FFF?text=Warrior",
+        image: "/3.png",
       },
       {
         value: "b",
         label: "Detailed quest log",
-        image: "https://placehold.co/300x300/3B82F6/FFF?text=Analyst",
+        image: "/3.png",
       },
     ],
   },
