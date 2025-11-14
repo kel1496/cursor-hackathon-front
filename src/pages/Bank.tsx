@@ -35,12 +35,12 @@ const Bank = () => {
   ];
 
   return (
-    <div className="w-[360px] h-[700px] mx-auto my-10 flex flex-col items-center">
+    <div className="w-[360px] h-[700px] mx-auto my-10 flex flex-col items-center min-h-screen bg-gray-900">
       {/* Botón de volver */}
       <div className="w-[90%] mb-4">
         <button
           onClick={() => setLocation("/")}
-          className="flex items-center text-gray-600 hover:text-gray-800 transition-colors"
+          className="flex items-center text-gray-400 hover:text-gray-200 transition-colors"
         >
           <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -49,33 +49,33 @@ const Bank = () => {
         </button>
       </div>
       {/* Cabecera del banco */}
-      <div className="w-[90%] flex flex-col items-center bg-white rounded-xl shadow px-4 py-6 mb-6">
-        <h1 className="text-2xl font-bold mb-2 text-gray-800">Bank 1</h1>
-        <div className="text-gray-600 font-semibold text-sm mb-1">
+      <div className="w-[90%] flex flex-col items-center bg-gray-800 px-4 py-6 mb-6 border-4 border-gray-600">
+        <h1 className="text-2xl font-bold mb-2 text-white">Bank 1</h1>
+        <div className="text-gray-400 font-semibold text-sm mb-1">
           Total balance
         </div>
-        <div className="text-2xl font-extrabold text-gray-900 mb-2">$515</div>
-        <span className="bg-green-100 text-green-700 font-semibold px-3 py-1 rounded-lg text-xs">
+        <div className="text-2xl font-extrabold text-white mb-2">$515</div>
+        <span className="bg-green-900 text-green-400 font-semibold px-3 py-1 text-xs border-2 border-green-600">
           +2hp/day
         </span>
       </div>
 
       {/* Lista de movimientos */}
       <div className="w-[90%] flex flex-col gap-3">
-        <h2 className="text-lg font-bold text-gray-800 mb-2">Movimientos</h2>
+        <h2 className="text-lg font-bold text-white mb-2">Movimientos</h2>
         {movimientos.map((mov) => (
           <div
             key={mov.id}
-            className="flex justify-between items-center bg-white shadow px-4 py-3 rounded-xl"
+            className="flex justify-between items-center bg-gray-800 px-4 py-3 border-4 border-gray-600"
           >
             <div>
-              <div className="font-semibold text-gray-700 text-sm">
+              <div className="font-semibold text-gray-200 text-sm">
                 {mov.descripcion}
               </div>
-              <div className="text-xs text-gray-400">{mov.fecha}</div>
+              <div className="text-xs text-gray-500">{mov.fecha}</div>
               <div
                 className={`text-sm font-bold ${
-                  mov.cantidad >= 0 ? "text-green-600" : "text-red-600"
+                  mov.cantidad >= 0 ? "text-green-400" : "text-red-400"
                 }`}
               >
                 {mov.cantidad >= 0 ? "+" : ""}
@@ -83,10 +83,10 @@ const Bank = () => {
               </div>
             </div>
             <span
-              className={`text-xs font-bold px-2 py-1 rounded-full ${
+              className={`text-xs font-bold px-2 py-1 ${
                 mov.hp > 0
-                  ? "bg-green-100 text-green-700"
-                  : "bg-red-100 text-red-700"
+                  ? "bg-green-900 text-green-400 border-2 border-green-600"
+                  : "bg-red-900 text-red-400 border-2 border-red-600"
               }`}
             >
               {mov.hp >= 0 ? `+${mov.hp}` : mov.hp}hp

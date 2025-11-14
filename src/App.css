@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+/* Pixel Art Styles */
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Pixel Art borders - remove antialiasing */
+* {
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+}
