@@ -35,7 +35,7 @@ const Bank = () => {
   ];
 
   return (
-    <div className="w-[360px] h-[700px] mx-auto my-10 flex flex-col items-center min-h-screen bg-gray-900">
+    <div className="mx-auto flex flex-col items-center min-h-screen bg-gray-900">
       {/* Botón de volver */}
       <div className="w-[90%] mb-4">
         <button

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useLocation } from "wouter";
 
 // --- Data for the Questions ---
 // Each option has an 'image' property that determines the character image displayed.
@@ -127,6 +128,7 @@ const DEFAULT_IMAGE =
 export const Attributes = () => {
   // State to hold the URL of the character image to display
   const [characterImage, setCharacterImage] = useState(DEFAULT_IMAGE);
+  const [, setLocation] = useLocation();
 
   // State to keep track of the selected answers (e.g., { q1: 'a', q2: 'b', ... })
   const [answers, setAnswers] = useState({});
@@ -209,6 +211,12 @@ export const Attributes = () => {
             ))}
           </div>
         </form>
+        <button
+          onClick={() => setLocation("/home")}
+          className="w-full bg-yellow-500 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition-colors"
+        >
+          Continue
+        </button>
       </main>
     </div>
   );
