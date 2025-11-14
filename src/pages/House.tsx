@@ -1,5 +1,9 @@
+import { useLocation } from "wouter";
+import { useState } from "react";
+
 // --- Constants ---
 const DEFAULT_IMAGE = "/3.png";
+const HOUSE_IMAGE = "/house.png";
 
 // --- Bank Data ---
 const banks = [
@@ -34,13 +38,24 @@ const banks = [
  * House Component - Bank Connection Page
  */
 export const House = () => {
+  const [characterImage, setCharacterImage] = useState(DEFAULT_IMAGE);
+  const [, navigate] = useLocation();
+
+  const handleBankClick = () => {
+    setCharacterImage(HOUSE_IMAGE);
+    // Small delay to show the image change before navigation
+    setTimeout(() => {
+      navigate("/");
+    }, 300);
+  };
+
   return (
     // Main container uses flex-col and h-screen to fill the viewport
     <div className="h-screen w-full flex flex-col bg-gray-900 text-white font-sans">
       {/* --- 1. Sticky Character Image Section --- */}
       <header className="sticky top-0 z-10 w-full flex justify-center py-4 md:py-6 bg-gray-900 shadow-lg">
         <img
-          src={DEFAULT_IMAGE}
+          src={characterImage}
           alt="Character"
           className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-yellow-500 transition-all duration-300 ease-in-out shadow-xl"
           onError={(e) => {
@@ -61,6 +76,7 @@ export const House = () => {
             {banks.map((bank) => (
               <div
                 key={bank.id}
+                onClick={handleBankClick}
                 className="flex items-center p-4 bg-gray-800 rounded-lg shadow-lg border border-gray-700 hover:bg-gray-700 transition-all duration-200 cursor-pointer"
               >
                 <img
@@ -74,14 +90,23 @@ export const House = () => {
                 <span className="text-lg text-gray-100 font-medium flex-1">
                   {bank.name}
                 </span>
-                <button className="text-yellow-500 hover:text-yellow-400 text-xl font-bold">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleBankClick();
+                  }}
+                  className="text-yellow-500 hover:text-yellow-400 text-xl font-bold"
+                >
                   +
                 </button>
               </div>
             ))}
 
             {/* Add More Bank Button */}
-            <div className="flex items-center p-4 bg-gray-800 rounded-lg shadow-lg border-2 border-dashed border-gray-600 hover:border-yellow-500 hover:bg-gray-700 transition-all duration-200 cursor-pointer">
+            <div
+              onClick={handleBankClick}
+              className="flex items-center p-4 bg-gray-800 rounded-lg shadow-lg border-2 border-dashed border-gray-600 hover:border-yellow-500 hover:bg-gray-700 transition-all duration-200 cursor-pointer"
+            >
               <div className="w-12 h-12 flex items-center justify-center mr-4 bg-gray-700 rounded-full">
                 <span className="text-2xl text-gray-400 font-bold">+</span>
               </div>
