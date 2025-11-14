@@ -5,97 +5,113 @@ import React, { useState } from "react";
 const questions = [
   {
     id: "q1",
-    text: "When facing a challenge, what is your first instinct?",
+    text: "What treasure are you chasing?",
     options: [
       {
         value: "a",
-        label: "Charge head-on",
-        image: "https://placehold.co/300x300/EF4444/FFF?text=Warrior",
+        label: "Build long-term wealth",
+        image: "/1.png",
       },
       {
         value: "b",
-        label: "Analyze the situation from afar",
-        image: "https://placehold.co/300x300/3B82F6/FFF?text=Analyst",
+        label: "Save for a dream purchase",
+        image: "/1.png",
       },
     ],
   },
   {
     id: "q2",
-    text: "What is your most valued possession?",
+    text: "How soon must the quest end?",
     options: [
       {
         value: "a",
-        label: "Your sharp intellect",
-        image: "https://placehold.co/300x300/A855F7/FFF?text=Mage",
+        label: "Sprint (≤6 months)",
+        image: "/2.png",
       },
       {
         value: "b",
-        label: "Your unwavering loyalty",
-        image: "https://placehold.co/300x300/EAB308/FFF?text=Knight",
+        label: "Marathon (>6 months)",
+        image: "/2.png",
       },
     ],
   },
   {
     id: "q3",
-    text: "In a team, you are the...",
+    text: "What's your financial experience?",
     options: [
       {
         value: "a",
-        label: "Leader, calling the shots",
-        image: "https://placehold.co/300x300/F97316/FFF?text=Leader",
+        label: "New recruit",
+        image: "/3.png",
       },
       {
         value: "b",
-        label: "Support, making sure everyone is safe",
-        image: "https://placehold.co/300x300/22C55E/FFF?text=Healer",
+        label: "Seasoned adventurer",
+        image: "/3.png",
       },
     ],
   },
   {
     id: "q4",
-    text: "What environment do you prefer?",
+    text: "Which mentor voice guides you?",
     options: [
       {
         value: "a",
-        label: "The bustling city streets",
+        label: "Encouraging ally",
         image: "https://placehold.co/300x300/71717A/FFF?text=Rogue",
       },
       {
         value: "b",
-        label: "The quiet, ancient forest",
+        label: "Stern commander",
         image: "https://placehold.co/300x300/16A34A/FFF?text=Druid",
       },
     ],
   },
   {
     id: "q5",
-    text: "Your ideal weapon is...",
+    text: "How intense should the journey feel?",
     options: [
       {
         value: "a",
-        label: "A well-balanced sword and shield",
+        label: "Calm and steady",
         image: "https://placehold.co/300x300/6B7280/FFF?text=Paladin",
       },
       {
         value: "b",
-        label: "A powerful, ancient staff",
+        label: "High-stakes and dark",
         image: "https://placehold.co/300x300/EC4899/FFF?text=Sorcerer",
       },
     ],
   },
   {
     id: "q6",
-    text: "What is your ultimate goal?",
+    text: "What habit is your biggest foe?",
     options: [
       {
         value: "a",
-        label: "To attain ultimate power",
+        label: "Daily treats (coffee/food)",
         image: "https://placehold.co/300x300/1E1B4B/FFF?text=Overlord",
       },
       {
         value: "b",
-        label: "To bring peace to the land",
+        label: "Impulse spending (shopping/nightlife)",
         image: "https://placehold.co/300x300/F0F9FF/111?text=Savior",
+      },
+    ],
+  },
+  {
+    id: "q7",
+    text: "How should the final goal be recorded?",
+    options: [
+      {
+        value: "a",
+        label: "Short heroic title",
+        image: "https://placehold.co/300x300/EF4444/FFF?text=Warrior",
+      },
+      {
+        value: "b",
+        label: "Detailed quest log",
+        image: "https://placehold.co/300x300/3B82F6/FFF?text=Analyst",
       },
     ],
   },
@@ -153,9 +169,9 @@ export const Attributes = () => {
             {questions.map((question) => (
               <fieldset
                 key={question.id}
-                className="p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700"
+                className="p-4 m-4 bg-gray-800 rounded-lg shadow-lg border border-gray-700"
               >
-                <legend className="text-xl md:text-2xl font-semibold text-white mb-5 px-1">
+                <legend className="text-medium md:text-2xl font-semibold text-white px-1">
                   {question.text}
                 </legend>
 
