@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Route } from "wouter";
 import Home from "./pages/Index";
 import Profile from "./pages/Profile";
+import Bank from "./pages/Bank";
 import "./App.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <>
       <Route path="/" component={Home} />
       <Route path="/profile" component={Profile} />
+      <Route path="/bank" component={Bank} />
     </>
 
   );
