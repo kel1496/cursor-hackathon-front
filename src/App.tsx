@@ -3,7 +3,7 @@ import { Route } from "wouter";
 import Home from "./pages/Index";
 import Profile from "./pages/Profile";
 import { Attributes } from "./pages/Attributes";
-// import { House } from "./pages/House";
+import { House } from "./pages/House";
 import Bank from "./pages/Bank";
 import "./App.css";
 
@@ -21,6 +21,8 @@ function App() {
       <Route path="/" component={Attributes} />
       <Route path="/home" component={Home} />
       <Route path="/profile" component={Profile} />
+      <Route path="/attributes" component={Attributes} />
+      <Route path="/house" component={House} />
       <Route path="/bank" component={Bank} />
     </>
   );

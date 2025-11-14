@@ -132,6 +132,7 @@ export const Attributes = () => {
 
   // State to keep track of the selected answers (e.g., { q1: 'a', q2: 'b', ... })
   const [answers, setAnswers] = useState({});
+  const [, navigate] = useLocation();
 
   /**
    * Handles changes to any radio button.
@@ -209,6 +210,16 @@ export const Attributes = () => {
                 </div>
               </fieldset>
             ))}
+          </div>
+
+          <div className="flex justify-end mt-10 mb-6">
+            <button
+              type="button"
+              onClick={() => navigate("/house")}
+              className="px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-yellow-400 transition-colors border-2 border-yellow-500"
+            >
+              Next
+            </button>
           </div>
         </form>
         <button
