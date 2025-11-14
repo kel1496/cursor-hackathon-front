@@ -14,8 +14,8 @@ const Achievements = () => {
   const achievements: Achievement[] = [
     {
       id: "1",
-      title: "Primer Ahorro",
-      description: "Realiza tu primer depósito de ahorro",
+      title: "First Savings",
+      description: "Make your first savings deposit",
       icon: "💰",
       unlocked: true,
       unlockedDate: "2024-06-01",
@@ -23,8 +23,8 @@ const Achievements = () => {
     },
     {
       id: "2",
-      title: "Ahorrador Consistente",
-      description: "Ahorra durante 7 días consecutivos",
+      title: "Consistent Saver",
+      description: "Save for 7 consecutive days",
       icon: "🔥",
       unlocked: true,
       unlockedDate: "2024-06-08",
@@ -32,32 +32,32 @@ const Achievements = () => {
     },
     {
       id: "3",
-      title: "Mega Ahorrador",
-      description: "Ahorra más de $1000 en total",
+      title: "Mega Saver",
+      description: "Save more than $1000 in total",
       icon: "💎",
       unlocked: false,
       category: "milestone",
     },
     {
       id: "4",
-      title: "Inversor Iniciado",
-      description: "Realiza tu primera inversión",
+      title: "Investor Initiated",
+      description: "Make your first investment",
       icon: "📈",
       unlocked: false,
       category: "investment",
     },
     {
       id: "5",
-      title: "Racha de 30 Días",
-      description: "Mantén una racha de ahorro por 30 días",
+      title: "30 Day Streak",
+      description: "Maintain a savings streak for 30 days",
       icon: "⭐",
       unlocked: false,
       category: "streak",
     },
     {
       id: "6",
-      title: "Balance Positivo",
-      description: "Mantén un balance positivo por un mes completo",
+      title: "Positive Balance",
+      description: "Maintain a positive balance for a full month",
       icon: "✅",
       unlocked: true,
       unlockedDate: "2024-06-15",
@@ -65,16 +65,16 @@ const Achievements = () => {
     },
     {
       id: "7",
-      title: "Inversor Experto",
-      description: "Invierte más de $500 en total",
+      title: "Expert Investor",
+      description: "Invest more than $500 in total",
       icon: "🏆",
       unlocked: false,
       category: "investment",
     },
     {
       id: "8",
-      title: "Ahorro Semanal",
-      description: "Ahorra $50 en una semana",
+      title: "Weekly Savings",
+      description: "Save $50 in one week",
       icon: "🎯",
       unlocked: true,
       unlockedDate: "2024-06-12",
@@ -104,12 +104,12 @@ const Achievements = () => {
     <div className="mx-auto flex flex-col items-center pb-20 min-h-screen bg-gray-900">
       {/* Header */}
       <div className="w-[90%] mt-6 mb-4">
-        <h1 className="text-3xl font-bold text-white mb-2">Logros</h1>
+        <h1 className="text-3xl font-bold text-white mb-2 pixel-art">Achievements</h1>
         <div className="flex items-center justify-between">
-          <p className="text-gray-400 text-sm">
-            Desbloquea logros completando desafíos
+          <p className="text-gray-400 text-sm pixel-art">
+            Unlock achievements by completing challenges
           </p>
-          <div className="bg-gray-800 px-3 py-1 border-2 border-gray-600">
+          <div className="bg-gray-800 px-3 py-1 border-2 border-gray-600 pixel-art">
             <span className="text-yellow-400 font-bold">{unlockedCount}</span>
             <span className="text-gray-400">/{totalCount}</span>
           </div>
@@ -121,7 +121,7 @@ const Achievements = () => {
         {achievements.map((achievement) => (
           <div
             key={achievement.id}
-            className={`bg-gray-800 border-4 ${getCategoryColor(achievement.category)} p-4 ${
+            className={`bg-gray-800 border-4 ${getCategoryColor(achievement.category)} p-4 pixel-art ${
               !achievement.unlocked ? "opacity-50" : ""
             }`}
           >
@@ -144,13 +144,13 @@ const Achievements = () => {
                 {achievement.description}
               </p>
               {achievement.unlocked && achievement.unlockedDate && (
-                <span className="text-xs text-green-400 font-semibold">
+                <span className="text-xs text-green-400 font-semibold pixel-art">
                   ✓ {new Date(achievement.unlockedDate).toLocaleDateString()}
                 </span>
               )}
               {!achievement.unlocked && (
-                <span className="text-xs text-gray-500 font-semibold">
-                  🔒 Bloqueado
+                <span className="text-xs text-gray-500 font-semibold pixel-art">
+                  🔒 Locked
                 </span>
               )}
             </div>
@@ -159,19 +159,19 @@ const Achievements = () => {
       </div>
 
       {/* Progress Summary */}
-      <div className="w-[90%] mt-6 bg-gray-800 border-4 border-gray-600 p-4">
-        <h2 className="text-lg font-bold text-white mb-3">Progreso General</h2>
-        <div className="w-full bg-gray-700 h-6 border-2 border-gray-600 overflow-hidden relative">
+      <div className="w-[90%] mt-6 bg-gray-800 border-4 border-gray-600 p-4 pixel-art">
+        <h2 className="text-lg font-bold text-white mb-3 pixel-art">Overall Progress</h2>
+        <div className="w-full bg-gray-700 h-6 border-2 border-gray-600 overflow-hidden relative pixel-art">
           <div
             className="bg-yellow-500 h-full transition-all duration-500 border-r-2 border-yellow-400"
             style={{ width: `${(unlockedCount / totalCount) * 100}%` }}
           ></div>
-          <span className="absolute right-2 top-1/2 -translate-y-1/2 text-yellow-400 font-semibold text-xs">
+          <span className="absolute right-2 top-1/2 -translate-y-1/2 text-yellow-400 font-semibold text-xs pixel-art">
             {Math.round((unlockedCount / totalCount) * 100)}%
           </span>
         </div>
-        <p className="text-sm text-gray-400 mt-2">
-          Has desbloqueado {unlockedCount} de {totalCount} logros
+        <p className="text-sm text-gray-400 mt-2 pixel-art">
+          You've unlocked {unlockedCount} of {totalCount} achievements
         </p>
       </div>
 

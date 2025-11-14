@@ -57,7 +57,8 @@ export const House = () => {
         <img
           src={characterImage}
           alt="Character"
-          className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-yellow-500 transition-all duration-300 ease-in-out shadow-xl"
+          className="w-48 h-48 md:w-56 md:h-56 object-cover border-4 border-yellow-500 transition-all duration-300 ease-in-out shadow-xl pixel-art"
+          style={{ imageRendering: "pixelated" }}
           onError={(e) => {
             (e.target as HTMLImageElement).src = DEFAULT_IMAGE;
           }}
@@ -67,7 +68,7 @@ export const House = () => {
       {/* --- 2. Scrollable Content Section --- */}
       <main className="flex-1 overflow-y-auto p-6 md:p-10">
         <div className="max-w-2xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold text-center text-yellow-400 mb-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-center text-yellow-400 mb-8 pixel-art">
             Connect Your Bank
           </h1>
 
@@ -77,17 +78,18 @@ export const House = () => {
               <div
                 key={bank.id}
                 onClick={handleBankClick}
-                className="flex items-center p-4 bg-gray-800 rounded-lg shadow-lg border border-gray-700 hover:bg-gray-700 transition-all duration-200 cursor-pointer"
+                className="flex items-center p-4 bg-gray-800 border-4 border-gray-600 hover:bg-gray-700 transition-all duration-200 cursor-pointer pixel-art"
               >
                 <img
                   src={bank.logo}
                   alt={bank.name}
-                  className="w-12 h-12 object-contain mr-4 bg-white rounded p-1"
+                  className="w-12 h-12 object-contain mr-4 bg-white border-2 border-gray-600 p-1 pixel-art"
+                  style={{ imageRendering: "pixelated" }}
                   onError={(e) => {
                     (e.target as HTMLImageElement).style.display = "none";
                   }}
                 />
-                <span className="text-lg text-gray-100 font-medium flex-1">
+                <span className="text-lg text-gray-100 font-medium flex-1 pixel-art">
                   {bank.name}
                 </span>
                 <button
@@ -95,7 +97,7 @@ export const House = () => {
                     e.stopPropagation();
                     handleBankClick();
                   }}
-                  className="text-yellow-500 hover:text-yellow-400 text-xl font-bold"
+                  className="text-yellow-500 hover:text-yellow-400 text-xl font-bold pixel-art border-2 border-yellow-500 px-2 py-1"
                 >
                   +
                 </button>
@@ -105,12 +107,14 @@ export const House = () => {
             {/* Add More Bank Button */}
             <div
               onClick={handleBankClick}
-              className="flex items-center p-4 bg-gray-800 rounded-lg shadow-lg border-2 border-dashed border-gray-600 hover:border-yellow-500 hover:bg-gray-700 transition-all duration-200 cursor-pointer"
+              className="flex items-center p-4 bg-gray-800 border-4 border-dashed border-gray-600 hover:border-yellow-500 hover:bg-gray-700 transition-all duration-200 cursor-pointer pixel-art"
             >
-              <div className="w-12 h-12 flex items-center justify-center mr-4 bg-gray-700 rounded-full">
-                <span className="text-2xl text-gray-400 font-bold">+</span>
+              <div className="w-12 h-12 flex items-center justify-center mr-4 bg-gray-700 border-2 border-gray-600 pixel-art">
+                <span className="text-2xl text-gray-400 font-bold pixel-art">
+                  +
+                </span>
               </div>
-              <span className="text-lg text-gray-300 font-medium flex-1">
+              <span className="text-lg text-gray-300 font-medium flex-1 pixel-art">
                 Add another bank
               </span>
             </div>
