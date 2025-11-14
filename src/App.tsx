@@ -8,6 +8,7 @@ import Bank from "./pages/Bank";
 import Quests from "./pages/Quests";
 import Achievements from "./pages/Achievements";
 import Stats from "./pages/Stats";
+import Academy from "./pages/Academy";
 import "./App.css";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
       <Route path="/quests" component={Quests} />
       <Route path="/achievements" component={Achievements} />
       <Route path="/stats" component={Stats} />
+      <Route path="/academy" component={Academy} />
     </>
   );
 }

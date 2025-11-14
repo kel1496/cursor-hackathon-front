@@ -105,15 +105,15 @@ export const House = () => {
               </span>
             </div>
 
-<div className="flex justify-end mt-10 mb-6">
-  <button
-    type="button"
-    onClick={() => navigate("/home")}
-    className="px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-yellow-400 transition-colors border-2 border-yellow-500"
-  >
-    Next
-  </button>
-</div>
+            <div className="flex justify-end mt-10 mb-6">
+              <button
+                type="button"
+                onClick={() => navigate("/home")}
+                className="px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-yellow-400 transition-colors border-2 border-yellow-500"
+              >
+                Next
+              </button>
+            </div>
           </div>
         </div>
       </main>

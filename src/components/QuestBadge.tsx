@@ -9,7 +9,7 @@ export const QuestBadge = ({ count, onClick }: QuestBadgeProps) => {
   return (
     <button
       onClick={onClick}
-      className="fixed top-4 right-4 z-20 bg-yellow-500 text-gray-900 font-bold px-3 py-2 border-4 border-yellow-600 hover:bg-yellow-400 transition-all cursor-pointer flex items-center gap-2 shadow-lg pixel-art"
+      className="fixed bottom-[10%] right-4 z-20 bg-yellow-500 text-gray-900 font-bold px-3 py-2 border-4 border-yellow-600 hover:bg-yellow-400 transition-all cursor-pointer flex items-center gap-2 shadow-lg pixel-art"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -33,4 +33,3 @@ export const QuestBadge = ({ count, onClick }: QuestBadgeProps) => {
     </button>
   );
 };
-
