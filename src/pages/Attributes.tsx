@@ -222,12 +222,6 @@ export const Attributes = () => {
             </button>
           </div>
         </form>
-        <button
-          onClick={() => setLocation("/home")}
-          className="w-full bg-yellow-500 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition-colors"
-        >
-          Continue
-        </button>
       </main>
     </div>
   );
