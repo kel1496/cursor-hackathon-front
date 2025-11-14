@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { Route } from "wouter";
+import Home from "./pages/Index";
+import Profile from "./pages/Profile";
 
 function App() {
   const [message, setMessage] = useState("");
@@ -10,10 +13,11 @@ function App() {
   }, []);
 
   return (
-    <div style={{ padding: "2rem" }}>
-      <h1>React + FastAPI</h1>
-      <p>API says: {message}</p>
-    </div>
+    <>
+      <Route path="/" component={Home} />
+      <Route path="/profile" component={Profile} />
+    </>
+
   );
 }
 
