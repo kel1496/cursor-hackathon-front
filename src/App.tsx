@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Route } from "wouter";
 import Home from "./pages/Index";
 import Profile from "./pages/Profile";
+import "./App.css";
 
 function App() {
   const [message, setMessage] = useState("");
