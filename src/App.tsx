@@ -4,6 +4,7 @@ import Home from "./pages/Index";
 import Profile from "./pages/Profile";
 import { Attributes } from "./pages/Attributes";
 // import { House } from "./pages/House";
+import "./App.css";
 
 function App() {
   const [message, setMessage] = useState("");
