@@ -1,5 +1,8 @@
+import Nav from "../components/Nav";
+
 const Profile = () => (
-  <div className="max-w-md mx-auto mt-10 p-6 rounded-lg shadow-lg bg-white">
+  <div className="w-[360px] h-[700px] mx-auto my-10 flex flex-col items-center pb-20">
+    <div className="max-w-md w-full p-6 rounded-lg shadow-lg bg-white">
     <div className="flex flex-col items-center">
       <img
         src="https://ui-avatars.com/api/?name=J+D"
@@ -9,6 +12,8 @@ const Profile = () => (
       <h2 className="text-2xl font-bold">John Doe</h2>
       <p className="text-gray-600 my-2">john.doe@email.com</p>
     </div>
+    </div>
+    <Nav />
   </div>
 );
 
