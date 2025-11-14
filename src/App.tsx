@@ -21,7 +21,8 @@ function App() {
 
   return (
     <>
-      <Route path="/" component={Home} />
+      <Route path="/" component={Attributes} />
+      <Route path="/home" component={Home} />
       <Route path="/profile" component={Profile} />
       <Route path="/attributes" component={Attributes} />
       <Route path="/house" component={House} />

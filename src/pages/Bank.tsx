@@ -35,11 +35,11 @@ const Bank = () => {
   ];
 
   return (
-    <div className="w-[360px] h-[700px] mx-auto my-10 flex flex-col items-center min-h-screen bg-gray-900">
+    <div className="mx-auto flex flex-col items-center min-h-screen bg-gray-900">
       {/* Botón de volver */}
       <div className="w-[90%] mb-4">
         <button
-          onClick={() => setLocation("/")}
+          onClick={() => setLocation("/home")}
           className="flex items-center text-gray-400 hover:text-gray-200 transition-colors"
         >
           <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
